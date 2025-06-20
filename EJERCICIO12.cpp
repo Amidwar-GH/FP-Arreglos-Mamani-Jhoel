@@ -5,10 +5,16 @@ false en caso contrario. */
 using namespace std;
 
 int main(){
+	int n;
+	int arr[n];
+	bool orden;
 	
-	
-	
-	
+	cout<<"Digite la cantidad de elementos de su arreglo: "; cin>>n;
+		
+	for(int i=0; i<n; i++){
+		cout<<"Digite el elemento "<<i+1<<endl;
+		cin>>arr[i];
+	}
 	
 	return 0;
 }
