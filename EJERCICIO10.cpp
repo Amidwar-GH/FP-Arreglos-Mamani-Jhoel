@@ -8,10 +8,14 @@ using namespace std;
 
 int main(){
 	int arreglo[30];
+	int sumatotal,auxmediana,auxmoda,numero;
+	
 	srand(time(0));
-	rand()%1000+100;
 	
-	
+	for(int i=0; i<30; i++){
+		arreglo[i]=rand()%901+100;
+		cout<<i+1<<". "<<arreglo[i]<<endl;
+	}
 	
 	return 0;
 }
