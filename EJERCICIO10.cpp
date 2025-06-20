@@ -8,42 +8,75 @@ using namespace std;
 
 int main(){
 	//sector variables
-	int arreglo[30];
-	int sumatotal,auxmediana,auxmoda,numero;
+	int arreglo[30],contador = 0;
+	int suma = 0;
+	float promedio, mediana;
 	
 	srand(time(0));
+	
+	cout<<"Se estan generando los siguientes numeros: "<<endl;
+	cout<<endl;
 	
 	//sector llenado de array
 	for(int i=0; i<30; i++){
 		arreglo[i]=rand()%901+100;
-		//cout<<i+1<<". "<<arreglo[i]<<endl;
+		cout<<i+1<<". -> "<<arreglo[i]<<endl;
 	}
 	
+	system("PAUSE");
+	
 	//sector suma del array
-	int suma=0;
+	//int suma=0;
 	for(int i=0; i<30; i++){
 		suma = suma + arreglo[i];
 	}
 	
-	float promedio=suma/30;
+	cout<<"--------------------"<<endl;
+	cout<<"LOS RESULTADOS SON: "<<endl;
+	cout<<"--------------------"<<endl;
 	
-	cout<<"La suma es: "<<suma<<endl;
-	cout<<"\nEl promedio es: "<<promedio;
+	//calculo de la media
+	promedio=suma/30.0;
+	//cout<<"La suma es: "<<suma<<endl;
+	cout<<"\nLa media es "<<promedio;
 	
 	//para el calculo de la mediana antes ordenar el array con el metodo de la burbuja
 	for(int i=0; i < 30-1; i++) {
-    for(int j=0; j < 30-i-1; j++) {
+		
+    	for(int j=0; j < 30-i-1; j++) {
         if(arreglo[j] > arreglo[j+1]) {
             // Intercambio de valores
             int temp= arreglo[j];
             arreglo[j]= arreglo[j + 1];
             arreglo[j+1]= temp;
         }
-    }
+    	}
 	}
-	for(int i=0; i<30;i++){
-		cout<<arreglo[i]<<" "<<endl;
+	
+	for(int i=0; i<1; i++){
+		
+		mediana = (arreglo[i+14]+arreglo[i+15])/2.0;
+		cout<<"\nLa mediana es "<<mediana;
 	}
+	
+	//asumiendo valores
+	int moda = arreglo[0];
+	int frecuencia = 1;
+	
+	for(int i=0; i<30; i++){
+		
+		for(int j=0; j<30; j++){
+			if(arreglo[i] == arreglo[j]){
+				contador = contador + 1;
+			}
+		}
+		if(contador > frecuencia){
+			frecuencia = contador;
+			moda = arreglo[i];
+		}
+	}
+	cout<<"\nLa moda es "<<moda;
+	
 	return 0;
 }
 
