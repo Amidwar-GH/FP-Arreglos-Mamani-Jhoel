@@ -4,7 +4,14 @@
 using namespace std;
 
 //construimos la funcion
-void mistrcpy(char llegada[]; char partida[]);
+void mistrcpy(char llegada[], char partida[]){
+	int i=0;
+	while(origen[i] != '\0'){
+		llegada[i] = partida[i];
+		i++
+	}
+	destino[i] = '\0';
+}
 
 
 int main(){
