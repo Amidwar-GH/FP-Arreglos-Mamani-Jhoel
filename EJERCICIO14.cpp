@@ -3,6 +3,8 @@
 #include<iostream>
 using namespace std;
 
+
+//<aca si ponemos es [] porque va recibir un arreglo de cierto tamaño>
 void mistrcat(char str1[] , char str2[]){
 	
 	//aca vamos a encontrar el '\0' para saber la posicion final
@@ -31,6 +33,14 @@ int main(){
 	cout<<"Digite la segunda palabra: ";
 	cin>>str2;
 	
+	mistrcat( str1, str2);  //<--en el llamado de la funcion solo ponemos el nombre del arreglo mas no lo corchetes
+	
+	cout<<"El resultado de mistrcat es "<<str1;
 	
 	return 0;
 }
+
+
+
+/* entrada = hola, mundo
+   salida = holamundo*/
