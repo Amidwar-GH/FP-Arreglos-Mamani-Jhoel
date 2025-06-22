@@ -9,14 +9,16 @@ ayudar para este propósito) Ejemplo: “En aproximadamente 120 días llegaremos al 
 using namespace std;
 
 int main(){
+	int numerofinal;
 	char enunciado[500];
 	char numeros[500];
 	
 	cout<<"Digite un enunciado: ";
-	cin.getline(enunciado,150);
+	cin.getline(enunciado,500);
 	
 	
-	int i,j;
+	int i=0,j=0;
+	
 	//<aca rrecorremos el arreglo hasta que encuentre el vacío>
 	while(enunciado[i] != '\0'){
 		if(isdigit(enunciado[i])){ //<-- si encuentra un digito en la posicion i
@@ -28,6 +30,11 @@ int main(){
 	numeros[j] = '\0';                //<--aca se agrega el vacío en el nuevo arreglo
 	
 	
+	//convertimos el arreglo en un numero con atoi
+	numerofinal = atoi(numeros);
+	numerofinal = numerofinal+2;
 	
+	cout<<"El numero final despues de la extraccion sumado dos es "<<endl;
+	cout<<numerofinal;
 	return 0;
 }
