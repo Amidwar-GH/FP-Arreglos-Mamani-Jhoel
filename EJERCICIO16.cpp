@@ -4,13 +4,30 @@ ayudar para este propósito) Ejemplo: “En aproximadamente 120 días llegaremos al 
 1202022 -> 1202024*/
 
 #include<iostream>
+#include<cctype>
+#include<cstdlib>
 using namespace std;
 
 int main(){
-	char enunciado[150];
+	char enunciado[500];
+	char numeros[500];
 	
-	cout.getline<<"Digite un enunciado: ";
-	cin>>enunciado;
+	cout<<"Digite un enunciado: ";
+	cin.getline(enunciado,150);
+	
+	
+	int i,j;
+	//<aca rrecorremos el arreglo hasta que encuentre el vacío>
+	while(enunciado[i] != '\0'){
+		if(isdigit(enunciado[i])){ //<-- si encuentra un digito en la posicion i
+			numeros[j] = enunciado[i];  //<-- lo guarda en el arreglo que conservara solo dígitos
+			j=j+1;                    //<-- se actualiza el valor
+		}
+		i=i+1;						//<-- se actualiza el valor
+	}
+	numeros[j] = '\0';                //<--aca se agrega el vacío en el nuevo arreglo
+	
+	
 	
 	return 0;
 }
