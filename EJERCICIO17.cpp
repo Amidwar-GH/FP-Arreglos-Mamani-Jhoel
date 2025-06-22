@@ -5,6 +5,7 @@ pertenece a esa persona.*/
 using namespace std;
 
 int main(){
+	bool veredicto;
 	char nombresCompletos[300];
 	char apellido[300];
 	
@@ -12,6 +13,14 @@ int main(){
 	cin.getline(nombresCompletos,300);
 	cout<<"Digite el apellido a buscar: ";
 	cin.getline(apellido,300);
+	
+	veredicto = funcionApellido(nombresCompletos, apellido);
+	
+	if(Veredicto == true){
+		cout<<"El apellido si pertenece a esa persona.";
+	}else{
+		cout<<"El apellido no se ha encontrado.";
+	}
 	
 	
 	return 0;
