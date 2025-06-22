@@ -4,14 +4,33 @@ son iguales, 1 si la cadena str1 >str2, -1 si la cadena str2>str1. No usar las f
 #include<iostream>
 using namespace std;
 
-char mistrcmp(char str1[], char str2[]){
+int mistrcmp(char str1[], char str2[]){
 	
+	//comparamos cadenas mientras tengan la misma cantidad de valores
+	int i;
+	while(str1[i] != '\0' && str2[i] != '\0'){
+		if(str1[i] > str2[i]){
+			return 1;
+		}else if(str1[i] < str2[i]){
+			return -1;
+		}
+		i=i+1;
+	}
+	
+	
+	if(str1[i] == '\0' && str2[i] == '\0'){
+		return 0;
+	}else if(str1[i] == '\0'){
+		return -1;
+	}else{
+		return 1;
+	}
+
 }
 
 
-
 int main(){
-	char comparacion;
+	int comparacion;
 	char str1[100];
 	char str2[100];
 	
@@ -25,5 +44,14 @@ int main(){
 	
 	comparacion = mistrcmp(str1, str2); // <-- aca vamos a llamar a la funcion nos va retornar un valor
 	
+	//tomando en cuenta el codico ascii
+	
+	if(comparacion == 0){
+		cout<<"["<<comparacion<<"]"<<" Las cadenas son iguales."<<endl;
+	}else if(comparacion == 1){
+		cout<<"["<<comparacion<<"]"<<" La primera cadena es mayor a la segunda cadena."<<endl;
+	}else if(comparacion == -1){
+		cout<<"["<<comparacion<<"]"<<" La segunda cadena es mayor a la primera cadena."<<endl;
+	}
 	return 0;
 }
