@@ -4,10 +4,11 @@
 using namespace std;
 
 int main(){
+	int CMYR=0,CMNR=0;
 	int numeromayor,numeromenor;
 	int n;
 	int numeros[100];
-	cout<<"Cuantos numeros va digitar?";
+	cout<<"Cuantos numeros va digitar?: ";
 	cin>>n;
 	
 	cout<<"DIGITE LOS NUMEROS."<<endl;
@@ -28,8 +29,21 @@ int main(){
 		}
 		
 	}
-	cout<<numeromayor<<" "<<numeromenor;
+	//cout<<numeromayor<<" "<<numeromenor;
 	
+	for(int i=0; i<n; i++){
+		if(numeros[i] == numeromayor){
+			CMYR +=1;
+		}
+		
+		if(numeros[i] == numeromenor){
+			CMNR +=1;
+		}
+		
+	}
+	
+	cout<<"El numero mayor es "<<numeromayor<<" y se repite "<<CMYR<<" VECES."<<endl;
+	cout<<"El numero menor es "<<numeromenor<<" y se repite "<<CMNR<<" VECES."<<endl;
 	
 	return 0;
 }
