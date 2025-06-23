@@ -6,13 +6,25 @@ cerrados.*/
 using namespace std;
 
 int main(){
+	bool Validador = true;
+	int C=0;
 	char texto[500];
 	cout<<"DIGITE EL TEXTO QUE CONTENGA PARENTESIS: ";
 	cin.getline(texto,500);
 	
 	int i=0;
 	while(texto[i]!= '\0'){
-		
+		if(frase[i] == '('){
+			C=C+1;
+		}else if(texto[i] == ')'){
+			C=C-1;
+			
+			if(C<0){
+				Validador = false;
+				break;
+			}
+		}
+		i++;
 	}
 	
 	
