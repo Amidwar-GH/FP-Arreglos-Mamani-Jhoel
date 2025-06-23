@@ -5,7 +5,7 @@ using namespace std;
 
 int main(){
 	int n;
-	cout<<"Cuantos nombres va digitar?: "; cin>>n;
+	cout<<"Cuantos nombres va digitar?: ";
 	cin>>n;
 	char nombres[100][30]; //<-- 100 nombres de longitud 30
 	
@@ -27,6 +27,11 @@ int main(){
 	}
 	
 	
+	cout<<"\nEL REORDENAMIENTO ES "<<endl;
+	cout<<"-----------------------------------------"<<endl;
+	for(int i=0; i<n; i++){
+		cout<<nombres[i]<<endl;
+	}
 	
 	return 0;
 }
