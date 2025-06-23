@@ -27,14 +27,14 @@ int main(){
 		}
 	}
 	
-	if(Verificador = false){
+	if(Verificador == false){
 		cout<<"\nEl numero ";
 			for(int i=0; i<n; i++){
 				cout<<numeros[i]<<" ";
 			}
 			cout<<"no es capicua.";
 	}else{
-		if(Verificador = true){
+		if(Verificador == true){
 			cout<<"\nEl numero ";
 			for(int i=0; i<n; i++){
 				cout<<numeros[i]<<" ";
