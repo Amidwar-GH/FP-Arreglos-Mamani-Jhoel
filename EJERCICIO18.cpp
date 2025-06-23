@@ -14,7 +14,7 @@ int main(){
 	
 	int i=0;
 	while(texto[i]!= '\0'){
-		if(frase[i] == '('){
+		if(texto[i] == '('){
 			C=C+1;
 		}else if(texto[i] == ')'){
 			C=C-1;
@@ -27,7 +27,15 @@ int main(){
 		i++;
 	}
 	
+	if(C != 0){
+		Validador = false;
+	}
 	
+	if(Validador == true){
+		cout<<"El texto esta correctamente escrito.";
+	}else if(Validador == false){
+		cout<<"El texto esta incorrectamente escrito.";
+	}
 	
 	return 0;
 }
