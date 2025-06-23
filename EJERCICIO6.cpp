@@ -11,22 +11,20 @@ int main(){
 	
 	//llenado del array
 	for(int i=0; i<n; i++){
-		cout<<i+1<<". ";
+		cout<<i<<". ";
 		cin>>numeros[i];
 	}
 	
-	int j=0;
-	while(numeros[j] == '\0'){
-		if(numeros[j] % 2 == 0){
-			P=P+numeros[j];
-		}
-		if(numeros[j] % 2 != 0 ){
-			IP=IP+numeros[j];
+	for(int i=0; i<n; i++){
+		if(i%2 == 0){
+			P=P+numeros[i];
+		}else{
+			IP=IP+numeros[i];
 		}
 	}
 	
-	cout<<"La suma de pares es "<<P;
-	
+	cout<<"La suma de indices pares del arreglo es: "<<P<<endl;
+	cout<<"La suma de indices impares del arreglo es: "<<IP<<endl;
 	
 	return 0;
 }
