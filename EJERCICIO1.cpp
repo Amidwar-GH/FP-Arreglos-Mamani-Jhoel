@@ -31,6 +31,11 @@ int main(){
 	
 	resultado[i] = '\0'; 
 	
+	int j=0;
+	while(resultado[j] != '\0'){
+		cout<<resultado[j];
+		j++;
+	}
 	
 	return 0;
 }
