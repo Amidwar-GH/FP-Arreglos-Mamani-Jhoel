@@ -13,6 +13,10 @@ int main (){
 		cin>>vector[i];
 	}
 	
+	for(int i=0; i<n; i++){
+		vector[i] = vector[i+1];
+		cout<<vector[i];
+	}
 	
 	return 0;
 }
