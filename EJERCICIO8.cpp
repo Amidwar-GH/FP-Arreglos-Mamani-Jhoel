@@ -19,5 +19,30 @@ int main(){
 	}
 	cout<<" es o no es capicua.";
 	
+	bool Verificador = true;
+	for(int i=0; i<n/2; i++){
+		if(numeros[i] != numeros[n-1-i]){
+			Verificador = false;
+			break;  //<-- Para romper el bucle
+		}
+	}
+	
+	if(Verificador = false){
+		cout<<"\nEl numero ";
+			for(int i=0; i<n; i++){
+				cout<<numeros[i]<<" ";
+			}
+			cout<<"no es capicua.";
+	}else{
+		if(Verificador = true){
+			cout<<"\nEl numero ";
+			for(int i=0; i<n; i++){
+				cout<<numeros[i]<<" ";
+			}
+			cout<<" es capicua.";
+		}
+	}
+	
+	
 	return 0;
 }
